@@ -1,0 +1,40 @@
+name: metrics
+
+on:
+  schedule:
+    - cron: "41 */6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "assets/metrics/**"
+
+permissions:
+  contents: write
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      # Needs a secret called METRICS_TOKEN (classic PAT, scopes: read:user, repo).
+      - name: General stats + languages
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          filename: assets/metrics/general.svg
+          config_timezone: Europe/Madrid
+          base: header, activity, community, repositories
+          plugin_languages: yes
+          plugin_languages_limit: 8
+          plugin_languages_details: percentage
+
+      - name: Isometric commit calendar
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          filename: assets/metrics/isocalendar.svg
+          config_timezone: Europe/Madrid
+          base: ""
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
