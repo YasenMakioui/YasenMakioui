@@ -20,14 +20,6 @@
   <img src="assets/terminal.svg" alt="neofetch-style terminal with my stack" width="100%">
 </p>
 
-```console
-yasen@homelab:~$ cat /etc/motd
- * Running Kubernetes platforms on AWS so a large fleet of web apps never notices a deploy
- * Writing Go CLIs and TUIs, because clicking through the AWS console is not a workflow
- * Tinkering with MikroTik VLANs and Proxmox nodes in the homelab
- * Background in electrical installations & electronics: I still respect the physical layer
-```
-
 <img src="assets/divider.svg" width="100%">
 
 ## `$ traceroute --stack`
@@ -44,26 +36,3 @@ yasen@homelab:~$ cat /etc/motd
 </p>
 
 <img src="assets/divider.svg" width="100%">
-
-## `$ cat /proc/stats`
-
-<p align="center">
-  <img src="assets/metrics/general.svg" alt="GitHub stats" width="49%">
-  <img src="assets/metrics/isocalendar.svg" alt="isometric commit calendar" width="49%">
-</p>
-
-## `$ tail -f /var/log/commits`
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/YasenMakioui/YasenMakioui/output/snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/YasenMakioui/YasenMakioui/output/snake-light.svg">
-    <img src="https://raw.githubusercontent.com/YasenMakioui/YasenMakioui/output/snake-dark.svg" alt="snake eating my contribution graph">
-  </picture>
-</p>
-
-<img src="assets/divider.svg" width="100%">
-
-<p align="center">
-  <code>It's not DNS. There's no way it's DNS. It was DNS.</code>
-</p>
